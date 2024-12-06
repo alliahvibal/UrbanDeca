@@ -26,19 +26,64 @@ const AboutUs = () => {
                 <div id="carouselExampleControls" className="carousel slide mb-5" data-bs-ride="carousel">
                   <div className="carousel-inner">
                     <div className="carousel-item active">
-                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+1" className="d-block w-100" alt="DecaHomes 1" />
+                    <img
+                        src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/blob-01f1c29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:632"
+                        className="d-block w-100"
+                        alt="DecaHomes 1"
+                        style={{
+                          height: "700px",
+                          width: "200px",
+                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                        }}
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+2" className="d-block w-100" alt="DecaHomes 2" />
+                      <img
+                        src="https://pinoydeal.ph/oc-content/uploads/920/172413_original.jpg"
+                        className="d-block w-100"
+                        alt="DecaHomes 2"
+                        style={{
+                          height: "700px",
+                          width: "200px",
+                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                        }}
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+3" className="d-block w-100" alt="DecaHomes 3" />
+                      <img
+                        src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/1.png/:/cr=t:12.41%25,l:0%25,w:100%25,h:75.19%25/rs=w:600,h:451,cg:true"
+                        className="d-block w-100"
+                        alt="DecaHomes 3"
+                        style={{
+                          height: "700px",
+                          width: "200px",
+                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                        }}
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+4" className="d-block w-100" alt="DecaHomes 4" />
+                      <img
+                        src="https://s3-ap-southeast-1.amazonaws.com/filipinohomes/developers3/331%208990%20Housing%20Development%20Corp/Urban%20Deca%20Homes%20Tipolo,tisa%20/gallery/studio%20/220466553.unnamed.jpg"
+                        className="d-block w-100"
+                        alt="DecaHomes 4"
+                        style={{
+                          height: "700px",
+                          width: "200px",
+                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                        }}
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+5" className="d-block w-100" alt="DecaHomes 5" />
+                      <img
+                        src="https://th.bing.com/th/id/OIP.ncBrHmUx09oEeond0w02iAHaEM?rs=1&pid=ImgDetMain"
+                        className="d-block w-100"
+                        alt="DecaHomes 5"
+                        style={{
+                          height: "700px",
+                          width: "200px",
+                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                        }}
+                      />
                     </div>
                   </div>
                   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -51,32 +96,124 @@ const AboutUs = () => {
                   </button>
                 </div>
 
+                <br>
+                </br>
+                <br>
+                </br>
+
                 {/* Description Section */}
                 <div className="col-12 col-md-8 info">
-                  <h3>Description</h3>
+                  <h3>URBAN DECA HOMES</h3>
                   <p>
-                    Nam a ultrices mauris. Nam efficitur, lorem a vehicula
-                    interdum, ligula velit euismod lorem, vitae vehicula ligula
-                    tortor eu leo. Maecenas porttitor massa ut vestibulum
-                    euismod. Aliquam eget mi aliquam.
+                  
+                  Embrace a world’s of living of much less but good life, Urban Deca Homes, the rising underserved with a community of authentic and rich Filipino Culture. Discover true and heartwarming people of the country. 
+                  Urban Deca Homes possibly the most practical choice community with its practical top security features, lot of amenities and facilities, lowest equity option, low monthly amortization and supported by government housing finance institution (Pag-ibig Financing).
+                  No compromises.                  
                   </p>
                   <p>
-                    Lorem ipsum dapibus dolor non, malesuada mauris. Aliquam
-                    eleifend mauris non odio mattis auctor. Aenean sit amet
-                    elementum tellus, a facilisis ligula. Pellentesque ac
-                    vehicula mauris.
+                  So enter, experience and embrace the best of both worlds only in Urban Deca Homes! 
                   </p>
                 </div>
 
                 <div className="col-12 col-md-3 offset-md-1 meta">
                   <div className="tags">
+                    <span className="meta-heading">Final Project</span>
                     <span className="meta-heading">Author</span>
                     <a href="#">Alliah Vibal</a>
-                    <a href="#">Final Project</a>
+                    <a href="#">Sharmaine Joy Tagalag</a>
+                    <a href="#">Dominique Althea Bonaobra</a>
+                    <a href="#">Kate Ann Nicolas</a>
                     <span className="meta-heading">Date</span>
                     <span>12-06-2024</span>
                   </div>
                 </div>
+                <br>
+                </br>
+                <br>
+                </br>
+                <hr/>
+                <br>
+                </br>
+                <br>
+                </br>
+                <div className="container">
+                    <div className="row">
+                      {/* Card 1 */}
+                      <div className="col-12 col-md-4 mb-4">
+                        <div className="card h-100">
+                          <img
+                            src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/pexels-rdne-stock-project-8293778.jpg/:/rs=w:365,h:365,cg:true,m/cr=w:365,h:365"
+                            className="card-img-top"
+                            alt="Urban Deca Homes"
+                            style={{
+                              height: "250px", // Set a fixed height for the image
+                              objectFit: "cover", // Ensure the image covers the area without distortion
+                            }}
+                          />
+                          <div className="card-body">
+                            <h5 className="card-title">QUALITY</h5>
+                            <p className="card-text">
+                            Each unit are fully finished and equipped align to the basic needs of every Filipino families
+                            </p>
+                            <p>
+                              
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      {/* Card 2 */}
+                      <div className="col-12 col-md-4 mb-4">
+                        <div className="card h-100">
+                          <img
+                            src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/pexels-cottonbro-studio-3943723.jpg/:/cr=t:16.68%25,l:0%25,w:100%25,h:66.64%25/rs=w:365,h:365,cg:true"
+                            className="card-img-top"
+                            alt="Urban Deca Homes"
+                            style={{
+                              height: "250px", // Set a fixed height for the image
+                              objectFit: "cover", // Ensure the image covers the area without distortion
+                            }}
+                          />
+                          <div className="card-body">
+                            <h5 className="card-title">AFFORDABILITY</h5>
+                            <p className="card-text">
+                              We offer low to zero down payment in multiple payment terms such as In-House, Bank and PagIbig Financing
+                            </p>
+                            <p>
+                              
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Card 3 */}
+                      <div className="col-12 col-md-4 mb-4">
+                        <div className="card h-100">
+                          <img
+                            src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/pexels-meo-fernando-3214989.jpg/:/cr=t:0%25,l:16.74%25,w:66.52%25,h:100%25/rs=w:365,h:365,cg:true"
+                            className="card-img-top"
+                            alt="Urban Deca Homes"
+                            style={{
+                              height: "250px", // Set a fixed height for the image
+                              objectFit: "cover", // Ensure the image covers the area without distortion
+                            }}
+                          />
+                          <div className="card-body">
+                            <h5 className="card-title">ACCESSIBILITY</h5>
+                            <p className="card-text">
+                            We are located in every part of Metro Manila with easy access to any mode of transportation
+                            </p>
+                            <p>
+                              
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
               </div>
             </div>
           </div>
