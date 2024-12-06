@@ -32,44 +32,44 @@ const AboutUs = () => {
                         alt="DecaHomes 1"
                         style={{
                           height: "700px",
-                          width: "200px",
-                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                          width: "100%",
+                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
                         }}
                       />
                     </div>
                     <div className="carousel-item">
                       <img
-                        src="https://pinoydeal.ph/oc-content/uploads/920/172413_original.jpg"
+                        src="https://i.ytimg.com/vi/WGx_x2fBsH4/maxresdefault.jpg"
                         className="d-block w-100"
                         alt="DecaHomes 2"
                         style={{
                           height: "700px",
-                          width: "200px",
-                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                          width: "100%",
+                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
                         }}
                       />
                     </div>
                     <div className="carousel-item">
                       <img
-                        src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/1.png/:/cr=t:12.41%25,l:0%25,w:100%25,h:75.19%25/rs=w:600,h:451,cg:true"
+                        src="https://www.gethome.ph/wp-content/uploads/2021/08/2Deca-Homes-Talomo-Housing-In-Davao-GetHomePh.jpg"
                         className="d-block w-100"
                         alt="DecaHomes 3"
                         style={{
                           height: "700px",
-                          width: "200px",
-                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                          width: "100%",
+                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
                         }}
                       />
                     </div>
                     <div className="carousel-item">
                       <img
-                        src="https://s3-ap-southeast-1.amazonaws.com/filipinohomes/developers3/331%208990%20Housing%20Development%20Corp/Urban%20Deca%20Homes%20Tipolo,tisa%20/gallery/studio%20/220466553.unnamed.jpg"
+                        src="https://assets.onepropertee.com/0x1000/forum-attachments/urban-deca-homes-ortigas-6.Djp7EgZp6fYY6ybwX.jpg"
                         className="d-block w-100"
                         alt="DecaHomes 4"
                         style={{
                           height: "700px",
-                          width: "200px",
-                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                          width: "100%",
+                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
                         }}
                       />
                     </div>
@@ -81,7 +81,7 @@ const AboutUs = () => {
                         style={{
                           height: "700px",
                           width: "200px",
-                          objectFit: "contain", // Ensures the image fits within the carousel without distortion
+                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
                         }}
                       />
                     </div>
@@ -96,14 +96,11 @@ const AboutUs = () => {
                   </button>
                 </div>
 
-                <br>
-                </br>
-                <br>
-                </br>
+                
 
                 {/* Description Section */}
                 <div className="col-12 col-md-8 info">
-                  <h3>URBAN DECA HOMES</h3>
+                  <h3 style={{ textAlign: 'center', fontSize: '36px', fontWeight: 'bold', color: '#333' }}>URBAN DECA HOMES</h3>
                   <p>
                   
                   Embrace a world’s of living of much less but good life, Urban Deca Homes, the rising underserved with a community of authentic and rich Filipino Culture. Discover true and heartwarming people of the country. 
@@ -134,8 +131,11 @@ const AboutUs = () => {
                 <hr/>
                 <br>
                 </br>
+              
+                <h1 style={{ textAlign: 'center', fontSize: '36px', fontWeight: 'bold', color: '#333', marginTop: '40px' }}>WHY CHOOSE US?</h1>
                 <br>
                 </br>
+
                 <div className="container">
                     <div className="row">
                       {/* Card 1 */}
