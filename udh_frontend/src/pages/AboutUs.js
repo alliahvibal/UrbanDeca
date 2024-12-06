@@ -22,7 +22,36 @@ const AboutUs = () => {
             </div>
             <div className="container">
               <div className="row">
-                <div className="mb-5"></div>
+                {/* Carousel Section */}
+                <div id="carouselExampleControls" className="carousel slide mb-5" data-bs-ride="carousel">
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+1" className="d-block w-100" alt="DecaHomes 1" />
+                    </div>
+                    <div className="carousel-item">
+                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+2" className="d-block w-100" alt="DecaHomes 2" />
+                    </div>
+                    <div className="carousel-item">
+                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+3" className="d-block w-100" alt="DecaHomes 3" />
+                    </div>
+                    <div className="carousel-item">
+                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+4" className="d-block w-100" alt="DecaHomes 4" />
+                    </div>
+                    <div className="carousel-item">
+                      <img src="https://via.placeholder.com/800x400.png?text=DecaHomes+5" className="d-block w-100" alt="DecaHomes 5" />
+                    </div>
+                  </div>
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+                {/* Description Section */}
                 <div className="col-12 col-md-8 info">
                   <h3>Description</h3>
                   <p>
@@ -38,6 +67,7 @@ const AboutUs = () => {
                     vehicula mauris.
                   </p>
                 </div>
+
                 <div className="col-12 col-md-3 offset-md-1 meta">
                   <div className="tags">
                     <span className="meta-heading">Author</span>
