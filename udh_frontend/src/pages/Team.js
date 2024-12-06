@@ -310,9 +310,9 @@ const Team = () => {
           <footer className="page-footer">
           <div className="container">
             <div className="links">
-              <a href="about.html">About</a>
-              <a href="contact.html">Contact</a>
-              <a href="projects.html">Projects</a>
+            <a href="">About Us</a>
+            <a href="">Contact</a>
+            <a href="">Projects</a>
             </div>
             <div className="social-icons">
               <a href="">

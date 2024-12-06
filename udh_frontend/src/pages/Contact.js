@@ -85,9 +85,9 @@ const Contact = () => {
       <footer className="page-footer">
         <div className="container">
           <div className="links">
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-            <a href="/projects">Projects</a>
+          <a href="">About Us</a>
+            <a href="">Contact</a>
+            <a href="">Projects</a>
           </div>
           <div className="social-icons">
             <a href="#">
