@@ -92,8 +92,8 @@ const Home = () => {
               >
                 Urban Deca Homes
               </h1>
-              <p className="my-3 text-light custom-shadow">
-                Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.
+              <p className="my-3 text-light">
+                Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum. Donec ad fusce augue interdum.
               </p>
               <a 
                 className="btn btn-orange btn-lg me-2"
@@ -364,9 +364,9 @@ const Home = () => {
 <footer className="page-footer">
   <div className="container">
     <div className="links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="projects.html">Projects</a>
+            <a href="">About Us</a>
+            <a href="">Contact</a>
+            <a href="">Projects</a>
     </div>
     <div className="social-icons">
       <a href="#"><i className="icon ion-social-facebook"></i></a>
