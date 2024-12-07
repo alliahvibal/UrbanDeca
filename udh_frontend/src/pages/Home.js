@@ -60,7 +60,6 @@ const Home = () => {
 
         // Cleanup
         return () => {
-            // Remove lightbox event listeners if needed
             try {
                 baguetteBox.destroy();
             } catch (error) {
@@ -72,7 +71,7 @@ const Home = () => {
     
     return (
         <React.Fragment>
-            <Navbar /> {/* Use the Navbar component */}
+            <Navbar /> {/* Navbar component */}
             <main className="page landing-page">
   <div className="carousel slide" data-bs-ride="carousel" id="carousel-2" data-bs-interval="3000" style={{ height: '600px' }}>
     <div className="carousel-inner h-100">
