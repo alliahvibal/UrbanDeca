@@ -31,29 +31,31 @@ const Team = () => {
           </div>
           <div className="mb-5"></div>
           <p className="mb-4 info custom-indent">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            quisquam harum asperiores blanditiis sapiente, reiciendis deleniti
-            quas fugit eius architecto. Consequuntur fugit quod minus impedit...
+            Tempor Lorem duis tempor exercitation sit aliqua esse duis anim. Fugiat ea aute nostrud amet ex et pariatur velit qui velit. Quis sint est enim laboris ex culpa voluptate ea incididunt cupidatat enim do fugiat. Velit culpa nisi mollit laborum est proident. Anim exercitation irure magna ex sit dolor mollit.
           </p>
           <p className="mb-4 info custom-indent">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            tempore a maiores ipsam corporis, veritatis eius amet at quam porro
-            sapiente, rem suscipit. Necessitatibus dolore assumenda...
+            Mollit fugiat commodo qui sit irure consequat dolor ut. Dolore ullamco incididunt sit tempor. Mollit incididunt duis mollit officia et dolore ex ad duis dolore nostrud et esse.
+
+Veniam consectetur dolore sint eiusmod quis minim. Eiusmod velit et consequat irure ad dolor laborum ad minim exercitation fugiat ex. Eu qui amet amet do laboris officia velit pariatur non nostrud dolore eu velit est. Officia Lorem et exercitation cillum do adipisicing mollit non. Ad eiusmod nostrud in amet nisi incididunt aute qui sint occaecat eu qui. Ea eu sint esse ut quis veniam cupidatat aliqua aliquip occaecat nisi voluptate qui aliquip.
+
+Quis cillum dolore qui aliquip velit enim magna veniam exercitation est culpa labore. Eu minim id amet laboris ex fugiat qui deserunt id enim. Velit consequat reprehenderit mollit proident qui aute eiusmod ea nostrud tempor pariatur ea ad ex.
           </p>
           <p className="mb-4 info custom-indent">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sit!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aut...
+            Nisi culpa dolor ipsum cillum eu eiusmod duis aliqua. Enim occaecat minim laborum dolor id id. Ipsum deserunt aliquip consectetur reprehenderit deserunt veniam esse anim aute sit quis. Reprehenderit mollit quis ad ullamco cillum eu. Amet velit quis ea sit nostrud exercitation duis pariatur excepteur enim eiusmod nulla. Id sunt sunt labore labore dolor sint aliqua.
+          </p>
+          <p className="mb-4 info custom-indent">
+            Nisi culpa dolor ipsum cillum eu eiusmod duis aliqua. Enim occaecat minim laborum dolor id id. Ipsum deserunt aliquip consectetur reprehenderit deserunt veniam esse anim aute sit quis. Reprehenderit mollit quis ad ullamco cillum eu. Amet velit quis ea sit nostrud exercitation duis pariatur excepteur enim eiusmod nulla. Id sunt sunt labore labore dolor sint aliqua.
           </p>
         </div>
       </section>
 
       {/* Team Section */}
-      <div className="container py-4 py-xl-5">
+      <div className="container py-5 py-xl-5">
   <div className="row mb-4 mb-lg-5">
-    <h2 className="fade-effect text-center">Our Team</h2>
+    <h2 className="text-center">Our Team</h2>
     <hr />
     <div className="col-md-8 col-xl-6 text-center mx-auto">
-      <p className="typing-effect">
+      <p>
         Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc.
         Vestibulum dui eget ultrices.
       </p>

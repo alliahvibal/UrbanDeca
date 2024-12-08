@@ -150,13 +150,9 @@ const Home = () => {
   </div>
   <section className="portfolio-block block-intro">
     <div className="container">
-      <div 
-        className=""
-        style={{ backgroundImage: `url('../assets/image/logo-black.png')`, height: '70px', width: '70px' }}
-      ></div>
       <div className="about-me">
         <p className="">
-          Lorem <strong>Team Byron</strong> ipsum dolor sit amet, consectetur adipisicing elit. Doloribus cumque ipsum consequuntur beatae architecto recusandae!
+          Lorem <strong>Team Byron</strong> ipsum dolor sit amet, consectetur adipisicing elit. Doloribus cumque ipsum consequuntur!
         </p>
       </div>
     </div>
