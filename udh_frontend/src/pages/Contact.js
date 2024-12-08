@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
-import $ from 'jquery';
-import Pikaday from 'pikaday';
-import baguetteBox from 'baguettebox.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import 'pikaday/css/pikaday.css';
-import 'baguettebox.js/dist/baguetteBox.min.css';
-import '../assets/css/Hero-Carousel-images.css';
-import '../assets/css/Team-icons.css';
+import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import $ from "jquery";
+import Pikaday from "pikaday";
+import baguetteBox from "baguettebox.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "pikaday/css/pikaday.css";
+import "baguettebox.js/dist/baguetteBox.min.css";
+import "../assets/css/Hero-Carousel-images.css";
+import "../assets/css/Team-icons.css";
 
 const Contact = () => {
   return (
     <React.Fragment>
-    <Navbar /> {/* Use the Navbar component */}
+      <Navbar /> {/* Use the Navbar component */}
       <main className="page">
         <section className="py-4 py-xl-5">
           <div className="container">
@@ -34,8 +34,8 @@ const Contact = () => {
                   <form className="p-3 p-xl-4" method="post">
                     <h4>Contact us</h4>
                     <p className="text-muted">
-                      Eros ligula lobortis elementum amet commodo ac nibh ornare,
-                      eu lobortis.
+                      Eros ligula lobortis elementum amet commodo ac nibh
+                      ornare, eu lobortis.
                     </p>
                     <div className="mb-3">
                       <label className="form-label" htmlFor="name">
@@ -85,7 +85,7 @@ const Contact = () => {
       <footer className="page-footer">
         <div className="container">
           <div className="links">
-          <a href="">About Us</a>
+            <a href="">About Us</a>
             <a href="">Contact</a>
             <a href="">Projects</a>
           </div>

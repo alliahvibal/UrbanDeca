@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 
 const projectSchema = new mongoose.Schema({
@@ -11,10 +10,6 @@ const projectSchema = new mongoose.Schema({
         required: true
     },
     image: {
-        type: String,
-        required: true
-    },
-    link: {
         type: String,
         required: true
     }
