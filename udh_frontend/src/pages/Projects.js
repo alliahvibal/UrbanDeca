@@ -23,7 +23,6 @@ const Project = () => {
             description:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.",
             image: require("../assets/image/ortigas-site-wide.png"),
-            link: "deca-ortigas.html",
           },
           {
             id: 2,
@@ -31,7 +30,6 @@ const Project = () => {
             description:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.",
             image: require("../assets/image/manila-site.webp"),
-            link: "deca-manila.html",
           },
           {
             id: 3,
@@ -39,7 +37,6 @@ const Project = () => {
             description:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.",
             image: require("../assets/image/litex-site.png"),
-            link: "deca-litex.html",
           },
           {
             id: 4,
@@ -47,7 +44,6 @@ const Project = () => {
             description:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.",
             image: require("../assets/image/cubao-site.jpg"),
-            link: "deca-cubao.html",
           },
         ];
   });
@@ -56,7 +52,6 @@ const Project = () => {
     title: "",
     description: "",
     image: "",
-    link: "",
   });
 
   useEffect(() => {
@@ -68,9 +63,22 @@ const Project = () => {
     setNewProject({ ...newProject, [name]: value });
   };
 
-  const addProject = () => {
-    setProjects([...projects, { ...newProject, id: projects.length + 1 }]);
-    setNewProject({ title: "", description: "", image: "", link: "" });
+  const addOrUpdateProject = () => {
+    if (!newProject.title || !newProject.description || !newProject.image) {
+      alert("All fields are required.");
+      return;
+    }
+
+    if (newProject.id) {
+      setProjects(
+        projects.map((project) =>
+          project.id === newProject.id ? newProject : project
+        )
+      );
+    } else {
+      setProjects([...projects, { ...newProject, id: projects.length + 1 }]);
+    }
+    setNewProject({ title: "", description: "", image: "" });
   };
 
   const deleteProject = (id) => {
@@ -80,7 +88,11 @@ const Project = () => {
   const editProject = (id) => {
     const project = projects.find((project) => project.id === id);
     setNewProject(project);
-    deleteProject(id);
+  };
+
+  const resetProjects = () => {
+    localStorage.removeItem("projects");
+    window.location.reload();
   };
 
   return (
@@ -91,10 +103,17 @@ const Project = () => {
           <div className="container">
             <div className="heading mb-5">
               <h2>PROJECTS</h2>
+              {/*<button
+                type="button"
+                className="btn btn-danger"
+                onClick={resetProjects}
+              >
+                Reset Projects
+              </button> */}
             </div>
             <div className="container">
-              <div className="row mb-2 mx-2 p-5">
-                <div className="col-md-3">
+              <div className="row mb-5">
+                <div className="col-md-4">
                   <input
                     type="text"
                     name="title"
@@ -104,7 +123,7 @@ const Project = () => {
                     onChange={handleInputChange}
                   />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-3">
                   <input
                     type="text"
                     name="description"
@@ -124,28 +143,19 @@ const Project = () => {
                     onChange={handleInputChange}
                   />
                 </div>
-                <div className="col-md-2">
-                  <input
-                    type="text"
-                    name="link"
-                    className="form-control"
-                    placeholder="Link"
-                    value={newProject.link}
-                    onChange={handleInputChange}
-                  />
-                </div>
                 <div className="col-md-2 text-center">
-                  <button
+                  <button 
                     type="button"
                     className="btn btn-warning"
-                    style={{ color: "white" }}
-                    onClick={addProject}
+                    style={{ color: "white", width: "100%" }}
+                    onClick={addOrUpdateProject}
                   >
-                    Add Project
+                    {newProject.id ? "Update Project" : "Add Project"}
                   </button>
                 </div>
               </div>
             </div>
+            <div className="container">
             <div className="row">
               {projects.map((project) => (
                 <div className="col-md-6 col-lg-6" key={project.id}>
@@ -181,13 +191,14 @@ const Project = () => {
                 </div>
               ))}
             </div>
+            </div>
           </div>
         </section>
       </main>
       <footer className="page-footer">
         <div className="container">
           <div className="links">
-          <a href="">About Us</a>
+            <a href="">About Us</a>
             <a href="">Contact</a>
             <a href="">Projects</a>
           </div>

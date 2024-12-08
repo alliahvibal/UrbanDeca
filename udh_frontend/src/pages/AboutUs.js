@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import Navbar from "../components/Navbar";
 import $ from "jquery";
 import Pikaday from "pikaday";
@@ -10,10 +10,16 @@ import "baguettebox.js/dist/baguetteBox.min.css";
 import "../assets/css/Hero-Carousel-images.css";
 import "../assets/css/Team-icons.css";
 
+const LazyImage = ({ src, alt, ...props }) => (
+  <img src={src} alt={alt} loading="lazy" {...props} />
+);
+
 const AboutUs = () => {
   return (
     <React.Fragment>
-      <Navbar /> {/* Use the Navbar component */}
+      <Suspense fallback={<div>Loading Navbar...</div>}>
+        <Navbar />
+      </Suspense>
       <main className="page project-page">
         <section className="portfolio-block project animated-section">
           <div className="container">
@@ -21,176 +27,136 @@ const AboutUs = () => {
               <h2>About Us</h2>
             </div>
             <div className="container">
+            <div className="row">
+              <LazyImage
+                src={require("../assets/image/deca-titles.png")}
+                alt="DecaHomes 1"
+                className="d-block w-100"
+                style={{
+                height: "700px",
+                width: "100%",
+                objectFit: "cover",
+                }}
+              />
+              </div>
+            </div>
+
+            <h1
+              style={{
+                textAlign: "center",
+                fontSize: "36px",
+                fontWeight: "bold",
+                color: "#333",
+                marginTop: "40px",
+              }}
+            >
+              WHY CHOOSE US?
+            </h1>
+            <br></br>
+            <br></br>
+            <div className="container">
               <div className="row">
-                {/* Carousel Section */}
-                <div id="carouselExampleControls" className="carousel slide mb-5" data-bs-ride="carousel">
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
+                {/* Card 1 */}
+                <div className="col-12 col-md-4 mb-4">
+                  <div className="card h-100">
                     <img
-                        src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/blob-01f1c29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:632"
-                        className="d-block w-100"
-                        alt="DecaHomes 1"
-                        style={{
-                          height: "700px",
-                          width: "100%",
-                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
-                        }}
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="https://i.ytimg.com/vi/WGx_x2fBsH4/maxresdefault.jpg"
-                        className="d-block w-100"
-                        alt="DecaHomes 2"
-                        style={{
-                          height: "700px",
-                          width: "100%",
-                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
-                        }}
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="https://www.gethome.ph/wp-content/uploads/2021/08/2Deca-Homes-Talomo-Housing-In-Davao-GetHomePh.jpg"
-                        className="d-block w-100"
-                        alt="DecaHomes 3"
-                        style={{
-                          height: "700px",
-                          width: "100%",
-                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
-                        }}
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="https://assets.onepropertee.com/0x1000/forum-attachments/urban-deca-homes-ortigas-6.Djp7EgZp6fYY6ybwX.jpg"
-                        className="d-block w-100"
-                        alt="DecaHomes 4"
-                        style={{
-                          height: "700px",
-                          width: "100%",
-                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
-                        }}
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="https://th.bing.com/th/id/OIP.ncBrHmUx09oEeond0w02iAHaEM?rs=1&pid=ImgDetMain"
-                        className="d-block w-100"
-                        alt="DecaHomes 5"
-                        style={{
-                          height: "700px",
-                          width: "200px",
-                          objectFit: "cover", // Ensures the image fits within the carousel without distortion
-                        }}
-                      />
+                      src={require("../assets/image/key.webp")}
+                      className="card-img-top"
+                      alt="Urban Deca Homes"
+                      loading="lazy"
+                      style={{
+                        height: "250px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">QUALITY</h5>
+                      <p className="card-text">
+                        Each unit are fully finished and equipped align to the
+                        basic needs of every Filipino families
+                      </p>
+                      <p></p>
                     </div>
                   </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
                 </div>
-              
-                <h1 style={{ textAlign: 'center', fontSize: '36px', fontWeight: 'bold', color: '#333', marginTop: '40px' }}>WHY CHOOSE US?</h1>
-                <br>
-                </br>
-                <br>
-                </br>
-                <div className="container">
-                    <div className="row">
-                      {/* Card 1 */}
-                      <div className="col-12 col-md-4 mb-4">
-                        <div className="card h-100">
-                          <img
-                            src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/pexels-rdne-stock-project-8293778.jpg/:/rs=w:365,h:365,cg:true,m/cr=w:365,h:365"
-                            className="card-img-top"
-                            alt="Urban Deca Homes"
-                            style={{
-                              height: "250px", // Set a fixed height for the image
-                              objectFit: "cover", // Ensure the image covers the area without distortion
-                            }}
-                          />
-                          <div className="card-body">
-                            <h5 className="card-title">QUALITY</h5>
-                            <p className="card-text">
-                            Each unit are fully finished and equipped align to the basic needs of every Filipino families
-                            </p>
-                            <p>
-                              
-                            </p>
-                          </div>
-                        </div>
-                      </div>
 
-
-
-                      {/* Card 2 */}
-                      <div className="col-12 col-md-4 mb-4">
-                        <div className="card h-100">
-                          <img
-                            src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/pexels-cottonbro-studio-3943723.jpg/:/cr=t:16.68%25,l:0%25,w:100%25,h:66.64%25/rs=w:365,h:365,cg:true"
-                            className="card-img-top"
-                            alt="Urban Deca Homes"
-                            style={{
-                              height: "250px", // Set a fixed height for the image
-                              objectFit: "cover", // Ensure the image covers the area without distortion
-                            }}
-                          />
-                          <div className="card-body">
-                            <h5 className="card-title">AFFORDABILITY</h5>
-                            <p className="card-text">
-                              We offer low to zero down payment in multiple payment terms such as In-House, Bank and PagIbig Financing
-                            </p>
-                            <p>
-                              
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Card 3 */}
-                      <div className="col-12 col-md-4 mb-4">
-                        <div className="card h-100">
-                          <img
-                            src="https://img1.wsimg.com/isteam/ip/20c5c599-70b5-4a1a-b07d-d3315230c84a/pexels-meo-fernando-3214989.jpg/:/cr=t:0%25,l:16.74%25,w:66.52%25,h:100%25/rs=w:365,h:365,cg:true"
-                            className="card-img-top"
-                            alt="Urban Deca Homes"
-                            style={{
-                              height: "250px", // Set a fixed height for the image
-                              objectFit: "cover", // Ensure the image covers the area without distortion
-                            }}
-                          />
-                          <div className="card-body">
-                            <h5 className="card-title">ACCESSIBILITY</h5>
-                            <p className="card-text">
-                            We are located in every part of Metro Manila with easy access to any mode of transportation
-                            </p>
-                            <p>
-                              
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                {/* Card 2 */}
+                <div className="col-12 col-md-4 mb-4">
+                  <div className="card h-100">
+                    <img
+                      src={require("../assets/image/piggy.webp")}
+                      className="card-img-top"
+                      alt="Urban Deca Homes"
+                      loading="lazy"
+                      style={{
+                        height: "250px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">AFFORDABILITY</h5>
+                      <p className="card-text">
+                        We offer low to zero down payment in multiple payment
+                        terms such as In-House, Bank and PagIbig Financing
+                      </p>
+                      <p></p>
                     </div>
                   </div>
+                </div>
 
-                  
-                {/* Description Section */}
+                {/* Card 3 */}
+                <div className="col-12 col-md-4 mb-4">
+                  <div className="card h-100">
+                    <img
+                      src={require("../assets/image/city.webp")}
+                      className="card-img-top"
+                      alt="Urban Deca Homes"
+                      loading="lazy"
+                      style={{
+                        height: "250px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">ACCESSIBILITY</h5>
+                      <p className="card-text">
+                        We are located in every part of Metro Manila with easy
+                        access to any mode of transportation
+                      </p>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Description Section */}
+            <div className="container">
+              <div className="row">
                 <div className="col-12 col-md-8 info">
-                  <h3 style={{fontSize: '36px', fontWeight: 'bold', color: '#333' }}>URBAN DECA HOMES</h3>
+                  <h3
+                    style={{
+                      fontSize: "36px",
+                      fontWeight: "bold",
+                      color: "#333",
+                    }}
+                  >
+                    URBAN DECA HOMES
+                  </h3>
                   <p>
-                  
-                  Embrace a world’s of living of much less but good life, Urban Deca Homes, the rising underserved with a community of authentic and rich Filipino Culture. Discover true and heartwarming people of the country. 
-                  Urban Deca Homes possibly the most practical choice community with its practical top security features, lot of amenities and facilities, lowest equity option, low monthly amortization and supported by government housing finance institution (Pag-ibig Financing).
-                  No compromises.                  
+                    Embrace a world’s of living of much less but good life,
+                    Urban Deca Homes, the rising underserved with a community of
+                    authentic and rich Filipino Culture. Discover true and
+                    heartwarming people of the country. Urban Deca Homes
+                    possibly the most practical choice community with its
+                    practical top security features, lot of amenities and
+                    facilities, lowest equity option, low monthly amortization
+                    and supported by government housing finance institution
+                    (Pag-ibig Financing). No compromises.
                   </p>
                   <p>
-                  So enter, experience and embrace the best of both worlds only in Urban Deca Homes! 
+                    So enter, experience and embrace the best of both worlds
+                    only in Urban Deca Homes!
                   </p>
                 </div>
 
@@ -206,13 +172,6 @@ const AboutUs = () => {
                     <span>12-06-2024</span>
                   </div>
                 </div>
-                <br>
-                </br>
-                <br>
-                </br>
-                <br>
-                </br>
-                
               </div>
             </div>
           </div>

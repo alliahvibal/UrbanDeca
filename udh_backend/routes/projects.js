@@ -18,7 +18,6 @@ router.post('/', async (req, res) => {
         name: req.body.name,
         description: req.body.description,
         image: req.body.image,
-        link: req.body.link
     });
 
     try {
@@ -38,7 +37,6 @@ router.put('/:id', async (req, res) => {
         project.name = req.body.name;
         project.description = req.body.description;
         project.image = req.body.image;
-        project.link = req.body.link;
 
         const updatedProject = await project.save();
         res.json(updatedProject);
