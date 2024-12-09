@@ -39,7 +39,14 @@ const Contact = () => {
       return;
     }
 
-    emailjs.send('service_ahs38qp', 'template_zs97hb4', formData, 'h5Aj_xmexGE_AnTcA')
+    const templateParams = {
+      from_name: name,
+      email: email,
+      message: message,
+      to_name: 'Recipient Name' // Replace with the actual recipient name if needed
+    };
+
+    emailjs.send('service_ahs38qp', 'template_zs97hb4', templateParams, 'h5Aj_xmexGE_AnTcA')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Email sent successfully!');
