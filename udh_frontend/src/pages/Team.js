@@ -24,7 +24,7 @@ const Team = () => {
               <h2>The Developer</h2>
             </div>
             <img
-              src={require('../assets/image/deca-titles.png')}
+              src={require('../assets/image/perspective9.jpg')}
               width="100%"
               alt="developer"
             />
