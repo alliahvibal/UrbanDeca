@@ -1,8 +1,5 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
 import Navbar from "../components/Navbar";
-import $ from "jquery";
-import Pikaday from "pikaday";
-import baguetteBox from "baguettebox.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "pikaday/css/pikaday.css";

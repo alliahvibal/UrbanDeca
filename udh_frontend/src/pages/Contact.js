@@ -9,8 +9,47 @@ import "pikaday/css/pikaday.css";
 import "baguettebox.js/dist/baguetteBox.min.css";
 import "../assets/css/Hero-Carousel-images.css";
 import "../assets/css/Team-icons.css";
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  useEffect(() => {
+    emailjs.init('h5Aj_xmexGE_AnTcA'); // Initialize EmailJS with your user ID
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+
+    if (!name || !email || !message) {
+      alert('Please complete all fields.');
+      return;
+    }
+
+    emailjs.send('service_ahs38qp', 'template_zs97hb4', formData, 'h5Aj_xmexGE_AnTcA')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Email sent successfully!');
+        setFormData({ name: '', email: '', message: '' }); // Reset form fields
+      }, (err) => {
+        console.log('FAILED...', err);
+        alert('Failed to send email. Please try again later.');
+      });
+  };
+
   return (
     <React.Fragment>
       <Navbar /> {/* Use the Navbar component */}
@@ -31,7 +70,7 @@ const Contact = () => {
               </div>
               <div className="col-md-6 col-xl-4">
                 <div className="slide-in-from-right">
-                  <form className="p-3 p-xl-4" method="post">
+                  <form className="p-3 p-xl-4" method="post" onSubmit={handleSubmit}>
                     <h4>Contact us</h4>
                     <p className="text-muted">
                       Eros ligula lobortis elementum amet commodo ac nibh
@@ -46,6 +85,8 @@ const Contact = () => {
                         type="text"
                         id="name"
                         name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="mb-3">
@@ -57,6 +98,8 @@ const Contact = () => {
                         type="email"
                         id="email"
                         name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="mb-3">
@@ -68,10 +111,12 @@ const Contact = () => {
                         id="message"
                         name="message"
                         rows="6"
+                        value={formData.message}
+                        onChange={handleChange}
                       ></textarea>
                     </div>
                     <div className="mb-3">
-                      <button className="btn btn-orange" type="button">
+                      <button className="btn btn-orange" type="submit">
                         Send
                       </button>
                     </div>

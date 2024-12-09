@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Navbar from "../components/Navbar";
-import $ from "jquery";
-import Pikaday from "pikaday";
-import baguetteBox from "baguettebox.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "pikaday/css/pikaday.css";
@@ -144,7 +140,7 @@ const Project = () => {
                   />
                 </div>
                 <div className="col-md-2 text-center">
-                  <button 
+                  <button
                     type="button"
                     className="btn btn-warning"
                     style={{ color: "white", width: "100%" }}
@@ -156,41 +152,41 @@ const Project = () => {
               </div>
             </div>
             <div className="container">
-            <div className="row">
-              {projects.map((project) => (
-                <div className="col-md-6 col-lg-6" key={project.id}>
-                  <div className="card border-0">
-                    <img
-                      className="card-img-top scale-on-hover"
-                      src={project.image}
-                      alt="Card Image"
-                      height="280px"
-                      width="100px"
-                    />
-                    <div className="card-body">
-                      <h6>{project.title}</h6>
-                      <p className="text-muted card-text">
-                        {project.description}
-                      </p>
-                      <div className="mt-3 d-flex justify-content-center gap-2">
-                        <button
-                          className="btn btn-warning"
-                          onClick={() => editProject(project.id)}
-                        >
-                          Edit
-                        </button>
-                        <button
-                          className="btn btn-dark"
-                          onClick={() => deleteProject(project.id)}
-                        >
-                          Delete
-                        </button>
+              <div className="row">
+                {projects.map((project) => (
+                  <div className="col-md-6 col-lg-6" key={project.id}>
+                    <div className="card border-0">
+                      <img
+                        className="card-img-top scale-on-hover"
+                        src={project.image}
+                        alt="Card Image"
+                        height="280px"
+                        width="100px"
+                      />
+                      <div className="card-body">
+                        <h6>{project.title}</h6>
+                        <p className="text-muted card-text">
+                          {project.description}
+                        </p>
+                        <div className="mt-3 d-flex justify-content-center gap-2">
+                          <button
+                            className="btn btn-warning"
+                            onClick={() => editProject(project.id)}
+                          >
+                            Edit
+                          </button>
+                          <button
+                            className="btn btn-dark"
+                            onClick={() => deleteProject(project.id)}
+                          >
+                            Delete
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
